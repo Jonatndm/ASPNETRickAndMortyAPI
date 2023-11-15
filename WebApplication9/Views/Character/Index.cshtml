@@ -1,0 +1,25 @@
+﻿@model WebApplication9.Models.Characters
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Especie</th>
+            <th>Imagen</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var personaje in Model.Results)
+        {
+            <tr>
+                <th scope="row">@personaje.Id</th>
+                <td>@personaje.Name</td>
+                <td>@personaje.Species</td>
+                <td>
+                    <img src="@personaje.Image" width="54px" class="img-fluid rounded-circle" />
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
